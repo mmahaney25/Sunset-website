@@ -12,6 +12,19 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Restore deep-linked path from 404.html SPA fallback.
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p) {
+          params.delete('p');
+          var rest = params.toString();
+          var base = '/Sunset-website';
+          window.history.replaceState(null, '', base + p + (rest ? '?' + rest : '') + window.location.hash);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
