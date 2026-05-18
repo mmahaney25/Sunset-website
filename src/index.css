@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fdf6ec;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Fraunces', Georgia, serif;
+  font-feature-settings: "ss01";
+}
+
+/* Sunset gradient sky */
+.sunset-sky {
+  background: linear-gradient(180deg, #fde4c1 0%, #fbcf95 35%, #f6a06a 65%, #e87651 100%);
+}
+
+.sunset-sky-soft {
+  background: linear-gradient(180deg, #fff4e3 0%, #fde0bc 100%);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-ink text-cream px-6 py-3 font-medium hover:bg-sunset-700 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-ink text-ink px-6 py-3 font-medium hover:bg-ink hover:text-cream transition;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-full px-4 py-2 font-medium hover:bg-black/5 transition;
+}
+
+.card {
+  @apply rounded-2xl bg-white shadow-sm border border-black/5 p-6;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1 text-xs rounded-full px-2.5 py-1 bg-black/5;
+}
+
+.input {
+  @apply w-full rounded-lg border border-black/15 px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-sunset-400;
+}
+
+.label {
+  @apply block text-sm font-medium text-ink mb-1;
+}
+
+.section {
+  @apply max-w-6xl mx-auto px-6;
+}
+
+/* hide scrollbar on marquee */
+.marquee::-webkit-scrollbar { display: none; }
+.marquee { scrollbar-width: none; }
