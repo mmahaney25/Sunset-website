@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sunset</title>
+    <script>
+      // SPA fallback for GitHub Pages — rewrite to index.html preserving the path.
+      (function () {
+        var base = '/Sunset-website/';
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        if (path.indexOf(base) === 0) {
+          var sub = path.slice(base.length);
+          window.location.replace(base + '?p=' + encodeURIComponent('/' + sub) + (search ? '&' + search.slice(1) : '') + hash);
+        } else {
+          window.location.replace(base);
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

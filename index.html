@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Sunset-website/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Sunset — Find what they left behind</title>
+    <meta name="description" content="Sunset helps families settle estates by finding lost accounts, generating probate documents, and distributing inheritances." />
+    <script type="module" crossorigin src="/Sunset-website/assets/index-Bno8NyFY.js"></script>
+    <link rel="stylesheet" crossorigin href="/Sunset-website/assets/index-Cs3LjqCK.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Restore deep-linked path from 404.html SPA fallback.
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p) {
+          params.delete('p');
+          var rest = params.toString();
+          var base = '/Sunset-website';
+          window.history.replaceState(null, '', base + p + (rest ? '?' + rest : '') + window.location.hash);
+        }
+      })();
+    </script>
+  </body>
+</html>
